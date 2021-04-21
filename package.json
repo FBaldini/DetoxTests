@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "e2e:test": "detox test -c ios.release",
+    "e2e:build": "detox build -c ios.release",
+    "e2e:ci": "npm run e2e:build && npm run e2e:test -- --cleanup"
   },
   "dependencies": {
     "randomcolor": "^0.6.2",
